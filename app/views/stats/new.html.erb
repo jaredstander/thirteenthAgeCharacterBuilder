@@ -1,4 +1,19 @@
-<%= form_for :stats do |f| %>
-  <%= f.label :character_name, "Character Name : " %>
+<%= form_for :stat do |f| %>
+  <%= f.label for :character_name %>
   <%= f.text_field :character_name %>
+  <%= f.label :character_race, "Race : " %>
+  <%= f.select :character_race, ["Aasimar", "Dark Elf", "Draconic", "Dwarf", "Forgeborn", "Gnome", "Half-Elf", "Half-Orc", "Halfling", "High Elf", "Human", "Tiefling", "Wood Elf"] %>
+  <%= f.label :character_strength, "Strength : " %>
+  <%= f.text_field :character_strength %>
+  <%= f.label :character_dexterity, "Dexterity : " %>
+  <%= f.text_field :character_dexterity %>
+  <% f.label :character_constitution, "Constitution : " %>
+  <%= f.text_field :character_constitution %>
+  <%= f.label :character_wisdom, "Wisdom : " %>
+  <%= f.text_field :character_wisdom %>
+  <%= f.label :character_intelligence, "Intelligence : " %>
+  <%= f.text_field :character_intelligence %>
+  <%= f.label :character_charisma, "Chrisma : " %>
+  <%= f.text_field :character_charisma %>
+  <%= f.submit "Create" %>
 <% end %>
